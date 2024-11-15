@@ -1,0 +1,135 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+header {
+    width: 100%;
+    background-color: #00796b;
+    padding: 1em;
+    text-align: center;
+    color: #ffffff;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    margin-top: 1em;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 0.5em 1em;
+    transition: background-color 0.3s;
+    border-radius: 8px;
+}
+
+nav ul li a:hover {
+    background-color: #004d40;
+}
+
+main {
+    padding-top: 7em;
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    gap: 2em;
+    margin-bottom: 2em;
+}
+
+/* Estilos de Tarjetas */
+.card {
+    background-color: #ffffff;
+    padding: 2em;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.3s;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+h2 {
+    color: #00796b;
+    font-size: 2em;
+    margin-bottom: 1em;
+    font-weight: 700;
+}
+
+/* Formulario y campos de entrada */
+form label {
+    display: block;
+    margin-top: 1em;
+    font-weight: bold;
+    color: #004d40;
+}
+
+form input, form button {
+    padding: 0.8em;
+    width: 100%;
+    margin-top: 0.5em;
+    border-radius: 8px;
+    border: 1px solid #b2dfdb;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #00796b;
+    box-shadow: 0 0 5px rgba(0, 121, 107, 0.5);
+}
+
+/* Botón estilizado */
+button {
+    background-color: #00796b;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #004d40;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #00695c;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
