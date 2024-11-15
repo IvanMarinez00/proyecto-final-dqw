@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Viaje - Planificador de Viajes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🌍 Tu Viaje</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#destinos">Destinos</a></li>
+                <li><a href="#presupuesto">Presupuesto</a></li>
+                <li><a href="#itinerario">Itinerario</a></li>
+                <li><a href="#login">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="card">
+            <h2>Bienvenido a Tu Viaje</h2>
+            <p>Organiza tus destinos, actividades y presupuesto de forma sencilla y visual.</p>
+        </section>
+
+        <section id="destinos" class="card">
+            <h2>Selecciona tus Destinos y Actividades</h2>
+            <form id="destinoForm">
+                <label for="destino">Destino:</label>
+                <input type="text" id="destino" name="destino" required placeholder="Ej. París">
+                
+                <label for="actividad">Actividad:</label>
+                <input type="text" id="actividad" name="actividad" required placeholder="Ej. Tour en bicicleta">
+                
+                <button type="button" onclick="agregarActividad()">Agregar Actividad</button>
+            </form>
+            <div id="listaActividades" class="itinerary-list"></div>
+        </section>
+
+        <section id="presupuesto" class="card">
+            <h2>Gestión de Presupuesto</h2>
+            <form>
+                <label for="presupuesto">Presupuesto Total:</label>
+                <input type="number" id="presupuesto" name="presupuesto" placeholder="€0">
+                
+                <label for="transporte">Transporte:</label>
+                <input type="number" id="transporte" name="transporte" placeholder="€0">
+                
+                <label for="alojamiento">Alojamiento:</label>
+                <input type="number" id="alojamiento" name="alojamiento" placeholder="€0">
+                
+                <label for="actividadesPresupuesto">Actividades:</label>
+                <input type="number" id="actividadesPresupuesto" name="actividadesPresupuesto" placeholder="€0">
+                
+                <button type="button" onclick="calcularPresupuesto()">Calcular Presupuesto</button>
+                <p id="resultadoPresupuesto" class="result-message"></p>
+            </form>
+        </section>
+
+        <section id="itinerario" class="card">
+            <h2>Resumen del Itinerario</h2>
+            <div id="itinerarioContenido" class="itinerary-list">
+                <p>No hay actividades agregadas aún.</p>
+            </div>
+        </section>
+
+        <section id="login" class="card">
+            <h2>Iniciar Sesión</h2>
+            <form>
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username" placeholder="Usuario">
+                
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" placeholder="Contraseña">
+                
+                <button type="submit">Ingresar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tu Viaje - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
